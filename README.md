@@ -130,7 +130,7 @@ REDIS_URL=redis://localhost:6379/0
 MAIL_SERVER=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USE_TLS=1
-MAIL_USERNAME=khanarnab563@gmail.com
+MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 
 # Social Media Links
@@ -286,7 +286,7 @@ Edit `static/css/style.css`:
 ## 📁 Project Structure
 
 ```
-portfolio2025/
+portfolio/
 ├── app.py                      # Main Flask application
 ├── requirements.txt            # Python dependencies
 ├── Dockerfile                 # Docker configuration
@@ -424,41 +424,6 @@ docker-compose exec web python -m flask profiler
 docker-compose exec db psql -U portfolio_user -d portfolio_db -c "SELECT * FROM pg_stat_activity;"
 ```
 
-## 🤝 Contributing
-
-### How to Contribute
-
-1. **Fork the repository**
-2. **Create a feature branch**
-3. **Make your changes**
-4. **Add tests for new functionality**
-5. **Ensure all tests pass**
-6. **Submit a pull request**
-
-### Development Setup
-
-```bash
-# Clone your fork
-git clone https://github.com/khanarnab/portfolio2025.git
-
-# Add upstream remote
-git remote add upstream https://github.com/originaluser/portfolio.git
-
-# Create feature branch
-git checkout -b feature/amazing-feature
-
-# Install development dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest
-
-# Run linting
-black .
-flake8 .
-```
-
 ### Code Style
 
 - Follow PEP 8 for Python code
@@ -498,25 +463,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help with setup, please:
 
-1. Check the [Issues](https://github.com/khanarnab/portfolio2025/issues) page
+1. Check the [Issues](https://github.com/yourusername/portfolio/issues) page
 2. Create a new issue if your problem isn't already listed
 3. Contact me directly via the portfolio contact form
 
 ## 🔄 Changelog
 
-### v1.0.0 (2024-12-15)
-- Initial release
-- Basic portfolio functionality
-- CI/CD pipeline implementation
-- Docker containerization
-- Comprehensive documentation
 
-### v1.1.0 (Planned)
-- Admin dashboard
-- Email notifications
-- Advanced analytics
-- Performance improvements
-
----
 
 **Built with ❤️ using Flask and modern web technologies**
