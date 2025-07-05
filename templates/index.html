@@ -1,0 +1,400 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Your Name | Full Stack Developer{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white min-vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">
+                    Hi, I'm <span class="text-warning">Your Name</span>
+                </h1>
+                <h2 class="h4 mb-4 text-light">Full Stack Developer & DevOps Enthusiast</h2>
+                <p class="lead mb-4">
+                    I build scalable web applications and automate development workflows. 
+                    Passionate about clean code, modern architectures, and continuous improvement.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="{{ url_for('projects') }}" class="btn btn-warning btn-lg me-3 mb-3">
+                        <i class="fas fa-folder-open me-2"></i>View Projects
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg mb-3">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                </div>
+                
+                <!-- Tech Stack Icons -->
+                <div class="tech-stack mt-4">
+                    <small class="text-light d-block mb-2">Technologies I work with:</small>
+                    <div class="tech-icons">
+                        <span class="badge bg-dark me-2 mb-2 p-2">
+                            <i class="fab fa-python me-1"></i>Python
+                        </span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">
+                            <i class="fab fa-js-square me-1"></i>JavaScript
+                        </span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">
+                            <i class="fab fa-docker me-1"></i>Docker
+                        </span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">
+                            <i class="fab fa-aws me-1"></i>AWS
+                        </span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">
+                            <i class="fab fa-github me-1"></i>GitHub Actions
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <div class="hero-image-container">
+                    <img src="{{ url_for('static', filename='images/profile-hero.jpg') }}" 
+                         alt="Your Name - Profile Picture" 
+                         class="img-fluid rounded-circle shadow-lg"
+                         style="max-width: 400px; width: 100%;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator text-center mt-5">
+            <a href="#about-preview" class="text-warning text-decoration-none">
+                <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section id="about-preview" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="h1 mb-4">About Me</h2>
+                <p class="lead mb-4">
+                    I'm a passionate full-stack developer with expertise in Python, Flask, and modern web technologies. 
+                    I love creating efficient, scalable solutions and automating development workflows.
+                </p>
+                <p class="mb-4">
+                    With a strong background in both frontend and backend development, I enjoy tackling complex 
+                    problems and delivering high-quality software solutions. I'm particularly interested in 
+                    DevOps practices and continuous integration/deployment pipelines.
+                </p>
+                
+                <div class="row text-center mb-4">
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <h3 class="h2 text-primary mb-0">3+</h3>
+                            <small class="text-muted">Years Experience</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <h3 class="h2 text-primary mb-0">20+</h3>
+                            <small class="text-muted">Projects Completed</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="counter-item">
+                            <h3 class="h2 text-primary mb-0">100%</h3>
+                            <small class="text-muted">Client Satisfaction</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="{{ url_for('about') }}" class="btn btn-primary">
+                    <i class="fas fa-user me-2"></i>Learn More About Me
+                </a>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="skills-preview">
+                    <h5 class="mb-3">Core Skills</h5>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Python & Flask</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Docker & CI/CD</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Database Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="h1 mb-3">Featured Projects</h2>
+            <p class="lead text-muted">Some of my recent work that showcases my skills and experience</p>
+        </div>
+        
+        <div class="row">
+            {% for project in featured_projects %}
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+                        {% if project.image_filename %}
+                        <img src="{{ url_for('static', filename='images/projects/' + project.image_filename) }}" 
+                             alt="{{ project.title }}" class="img-fluid">
+                        {% else %}
+                        <i class="fas fa-code fa-3x text-white"></i>
+                        {% endif %}
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text flex-grow-1">{{ project.description }}</p>
+                        
+                        <div class="tech-stack mb-3">
+                            {% for tech in project.tech_stack.split(', ') %}
+                            <span class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="card-actions">
+                            {% if project.github_url %}
+                            <a href="{{ project.github_url }}" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+                                <i class="fab fa-github me-1"></i>Code
+                            </a>
+                            {% endif %}
+                            {% if project.live_url %}
+                            <a href="{{ project.live_url }}" class="btn btn-primary btn-sm me-2" target="_blank">
+                                <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                            </a>
+                            {% endif %}
+                            <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-info-circle me-1"></i>Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-folder-open me-2"></i>View All Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="h1 mb-3">What I Do</h2>
+            <p class="lead text-muted">My areas of expertise and the services I provide</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card text-center p-4 h-100">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-code fa-3x text-primary"></i>
+                    </div>
+                    <h4 class="mb-3">Full Stack Development</h4>
+                    <p class="text-muted">
+                        Building complete web applications from frontend to backend, 
+                        with a focus on scalability and maintainability.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Frontend Development</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Backend APIs</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Database Design</li>
+                        <li><i class="fas fa-check text-success me-2"></i>UI/UX Implementation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card text-center p-4 h-100">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-cogs fa-3x text-success"></i>
+                    </div>
+                    <h4 class="mb-3">DevOps & Automation</h4>
+                    <p class="text-muted">
+                        Streamlining development workflows with CI/CD pipelines, 
+                        containerization, and cloud deployment strategies.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>CI/CD Pipelines</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Docker & Kubernetes</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Cloud Deployment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Infrastructure as Code</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card text-center p-4 h-100">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-database fa-3x text-info"></i>
+                    </div>
+                    <h4 class="mb-3">Data & Analytics</h4>
+                    <p class="text-muted">
+                        Designing efficient data architectures and creating 
+                        insightful dashboards for data-driven decision making.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Database Optimization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Data Visualization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>API Development</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Performance Tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="h1 mb-3">Latest Blog Posts</h2>
+            <p class="lead text-muted">Sharing knowledge and insights from my development journey</p>
+        </div>
+        
+        <div class="row">
+            <!-- Sample blog posts - replace with dynamic content -->
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-calendar-alt text-muted me-2"></i>
+                            <small class="text-muted">December 15, 2024</small>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="{{ url_for('blog_post', slug='building-modern-portfolio-flask-cicd') }}" class="text-decoration-none">
+                                Building a Modern Portfolio with Flask and CI/CD
+                            </a>
+                        </h5>
+                        <p class="card-text">
+                            Learn how to build a modern portfolio website using Flask and implement 
+                            automated deployment with GitHub Actions.
+                        </p>
+                        <a href="{{ url_for('blog_post', slug='building-modern-portfolio-flask-cicd') }}" class="btn btn-outline-primary btn-sm">
+                            Read More <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-calendar-alt text-muted me-2"></i>
+                            <small class="text-muted">December 10, 2024</small>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="#" class="text-decoration-none">
+                                Docker Best Practices for Python Applications
+                            </a>
+                        </h5>
+                        <p class="card-text">
+                            Essential Docker practices for building efficient, secure, and maintainable 
+                            Python application containers.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            Read More <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-calendar-alt text-muted me-2"></i>
+                            <small class="text-muted">December 5, 2024</small>
+                        </div>
+                        <h5 class="card-title">
+                            <a href="#" class="text-decoration-none">
+                                API Design Principles for Scalable Applications
+                            </a>
+                        </h5>
+                        <p class="card-text">
+                            Key principles and patterns for designing robust, scalable APIs that can 
+                            grow with your application.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            Read More <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{{ url_for('blog') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-blog me-2"></i>View All Posts
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
+                <h2 class="h1 mb-4">Ready to Work Together?</h2>
+                <p class="lead mb-4">
+                    I'm always interested in new opportunities and exciting projects. 
+                    Let's discuss how we can bring your ideas to life.
+                </p>
+                <div class="cta-buttons">
+                    <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg me-3 mb-3">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                    <a href="{{ url_for('download_resume') }}" class="btn btn-outline-light btn-lg mb-3">
+                        <i class="fas fa-download me-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

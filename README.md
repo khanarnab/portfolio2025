@@ -424,14 +424,6 @@ docker-compose exec web python -m flask profiler
 docker-compose exec db psql -U portfolio_user -d portfolio_db -c "SELECT * FROM pg_stat_activity;"
 ```
 
-### Code Style
-
-- Follow PEP 8 for Python code
-- Use meaningful variable and function names
-- Add docstrings for all functions and classes
-- Include type hints where appropriate
-- Write tests for new functionality
-
 ## 📚 Resources
 
 ### Documentation
@@ -458,17 +450,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Font Awesome](https://fontawesome.com/) - Icons
 - [AOS](https://michalsnik.github.io/aos/) - Animations
 - [GitHub Actions](https://github.com/features/actions) - CI/CD
-
-## 📞 Support
-
-If you have any questions or need help with setup, please:
-
-1. Check the [Issues](https://github.com/yourusername/portfolio/issues) page
-2. Create a new issue if your problem isn't already listed
-3. Contact me directly via the portfolio contact form
-
-## 🔄 Changelog
-
 
 
 **Built with ❤️ using Flask and modern web technologies**
